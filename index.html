@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./styles.css">
+
+<link rel="stylesheet" href="./iconfont/iconfont.css">
+
+<body>
+    <div class="得">
+        <!--顶部-->
+        <header class="navbar1">
+            <nav>
+                <div class="container">
+                    <div class="arrow left-arrow">
+                        <i class="iconfont icon-arrow-left">&#xe6bc;</i>
+                    </div>
+                    <div class="content">
+                        <div class="text-item">新品上市：秋季夹克现已上市</div>
+                        <div class="text-item">通过我们的新忠诚度获得折扣</div>
+                        <div class="text-item"><i>ORDER BFEORE 18TH DEC RECEIVE YOUR ITEMS BEFORE CHRISTMAS</i> </div>
+                    </div>
+                    <div class="arrow right-arrow">
+                        <i class="iconfont icon-arrow-right">&#xe62e;</i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--导航部分-->
+        <div class="navbar">
+
+            <div class="left">
+                <img src="./images/logo.png" alt="Logo" class="logo" />
+            </div>
+
+            <div class="center">
+                <ul>
+                    <li>
+                        <a href="#">女装</a>
+                        <div class="nav-bar-list">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p class="name">特征</p>
+                                        <p class="name">系列</p>
+                                        <p class="name">类别</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">男装</a>
+                        <div class="nav-bar-list">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p class="name">特征</p>
+                                        <p class="name">系列</p>
+                                        <p class="name">类别</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">童装</a>
+                        <div class="nav-bar-list">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p class="name">特征</p>
+                                        <p class="name">系列</p>
+                                        <p class="name">类别</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                        <div class="nav-bar-list">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p class="name">我们的故事</p>
+                                        <p class="name">获奖者</p>
+                                        <p class="name">技术</p>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">B实验室</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- 右侧导航 -->
+                <ul class="nav">
+                    <li><a href="#">简体中文</a><i class="iconfont " style="padding:10px">&#xe62e;</i>
+                    </li>
+
+                </ul>
+                <!-- 右侧图标 -->
+                <div class="icons">
+                    <i class="iconfont icon-home" style="padding: 10px; font-weight: bold;">&#xe65d;</i>
+                    <i class="iconfont icon-settings" style="padding: 10px; font-weight: bold;">&#xe63d;</i>
+                    <i class="iconfont icon-settings" style="padding: 10px; font-weight: bold;">&#xe607;</i>
+                </div>
+            </div>
+        </div>
+        <!--首页中间文本-->
+
+
+
+
+
+        <!-- 轮播部分 -->
+        <div class="carousel-home">
+            <div class="carousel-content">
+                <!-- 图片 -->
+                <img src="./images/packground.png" alt="图片" class="carousel-image">
+                <!-- 视频 -->
+                <video src="./video/1.mp4" class="carousel-video" autoplay muted loop></video>
+
+                <!-- 指示圆点 -->
+                <div class="dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                </div>
+                <!--首页中间文本-->
+
+                <div class="hero-text">
+                    <p>WITHSTANDS DOWN TO -50°C</p>
+                    <h1>EXTREME COLLECTION</h1>
+                    <!-- 添加一个容器包裹按钮 -->
+                    <div class="button">
+                        <button>MEN</button>
+                        <button>WOMEN</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 圆形按钮，跳转到下一部分 -->
+            <div class="scroll-down" onclick="scrollToSection()">
+                <div class="triangle"></div>
+            </div>
+
+
+
+
+
+
+
+            <!-- JavaScript 代码，，，，，，，，视频滚动到下一部分，，，，，，，，，，，-->
+            <script>
+                // 滚动到下一部分
+                function scrollToSection() {
+                    const nextSection = document.getElementById('section-2');
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }</script>
+
+            <script src="script.js"></script>
+
+        </div>
+
+        <div class="变动图">
+            <div class="开头超链接">
+                <p class="标签啊啊啊啊啊啊">我们最畅销的产品</p>
+                <a class="女性" href="#">女性</a><a class="签" href="#">男性</a><a class="签" href="#">孩子们</a>
+            </div>
+            <div class="小盒">
+                <img src="./images/图四.png" alt="">
+                <img src="./images/图4.webp" alt="">
+                <div class="图解1">
+                    <p class="标签啊啊啊啊">BOSIDENG 2024</p>
+                    <h3>高级商务女士鹅绒大衣</h3>
+                    <p class="标签啊啊">499.9</p>
+                    <svg t="1734331314516" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4321" width="32" height="32">
+                        <path
+                            d="M885.333333 938.666667H138.666667a53.393333 53.393333 0 0 1-53.333334-53.333334V138.666667a53.393333 53.393333 0 0 1 53.333334-53.333334h746.666666a53.393333 53.393333 0 0 1 53.333334 53.333334v746.666666a53.393333 53.393333 0 0 1-53.333334 53.333334zM138.666667 128a10.666667 10.666667 0 0 0-10.666667 10.666667v746.666666a10.666667 10.666667 0 0 0 10.666667 10.666667h746.666666a10.666667 10.666667 0 0 0 10.666667-10.666667V138.666667a10.666667 10.666667 0 0 0-10.666667-10.666667z"
+                            fill="#5C5C66" p-id="4322">
+
+                        </path>
+                    </svg>
+
+
+                </div>
+            </div>
+            <div class="小盒">
+                <img src="./images/图五.png" alt="">
+                <img src="./images/图5.webp" alt="">
+                <div class="图解1">
+                    <p class="标签啊">BOSIDENG 2024</p>
+                    <h3>全长紧身胸衣鹅毛羽绒服</h3>
+                    <p>499.9</p>
+                    <svg t="1734331314516" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4321" width="32" height="32">
+                        <path
+                            d="M885.333333 938.666667H138.666667a53.393333 53.393333 0 0 1-53.333334-53.333334V138.666667a53.393333 53.393333 0 0 1 53.333334-53.333334h746.666666a53.393333 53.393333 0 0 1 53.333334 53.333334v746.666666a53.393333 53.393333 0 0 1-53.333334 53.333334zM138.666667 128a10.666667 10.666667 0 0 0-10.666667 10.666667v746.666666a10.666667 10.666667 0 0 0 10.666667 10.666667h746.666666a10.666667 10.666667 0 0 0 10.666667-10.666667V138.666667a10.666667 10.666667 0 0 0-10.666667-10.666667z"
+                            fill="#5C5C66" p-id="4322">
+
+                        </path>
+                    </svg>
+
+                </div>
+            </div>
+            <div class="小盒">
+                <img src="./images/图六.png" alt="">
+                <img src="./images/图6.webp" alt="">
+                <div class="图解1">
+                    <p>BOSIDENG 2024</p>
+                    <h3>经典超长款鹅绒大衣</h3>
+                    <p>499.9</p>
+                    <svg t="1734331314516" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4321" width="32" height="32">
+                        <path
+                            d="M885.333333 938.666667H138.666667a53.393333 53.393333 0 0 1-53.333334-53.333334V138.666667a53.393333 53.393333 0 0 1 53.333334-53.333334h746.666666a53.393333 53.393333 0 0 1 53.333334 53.333334v746.666666a53.393333 53.393333 0 0 1-53.333334 53.333334zM138.666667 128a10.666667 10.666667 0 0 0-10.666667 10.666667v746.666666a10.666667 10.666667 0 0 0 10.666667 10.666667h746.666666a10.666667 10.666667 0 0 0 10.666667-10.666667V138.666667a10.666667 10.666667 0 0 0-10.666667-10.666667z"
+                            fill="#5C5C66" p-id="4322">
+
+                        </path>
+                    </svg>
+
+                </div>
+            </div>
+            <div></div>
+            <div class="小盒">
+                <img src="./images/图七.png" alt="">
+                <img src="./images/图7.webp" alt="">
+                <div class="图解1">
+                    <p>BOSIDENG 2024</p>
+                    <h3>女款经典鹅绒夹克</h3>
+                    <p>499.9</p>
+                    <svg t="1734331314516" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4321" width="32" height="32">
+                        <path
+                            d="M885.333333 938.666667H138.666667a53.393333 53.393333 0 0 1-53.333334-53.333334V138.666667a53.393333 53.393333 0 0 1 53.333334-53.333334h746.666666a53.393333 53.393333 0 0 1 53.333334 53.333334v746.666666a53.393333 53.393333 0 0 1-53.333334 53.333334zM138.666667 128a10.666667 10.666667 0 0 0-10.666667 10.666667v746.666666a10.666667 10.666667 0 0 0 10.666667 10.666667h746.666666a10.666667 10.666667 0 0 0 10.666667-10.666667V138.666667a10.666667 10.666667 0 0 0-10.666667-10.666667z"
+                            fill="#5C5C66" p-id="4322">
+
+                        </path>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+        <div class="desk-container1">
+            <!-- 图片1 -->
+            <div class="desk1">
+                <img src="./images/4.1.png" alt="Extreme">
+                <div class="desk-content">
+                    <h8>WITHSTAND -20°C</h8>
+                    <h3>EXTREME</h3>
+                    <button class="hover-button"> VIEW PRODUCTS</button>
+                </div>
+            </div>
+            <!-- 图片2 -->
+            <div class="desk1">
+                <img src="./images/4.2.png" alt="All Weather">
+                <div class="desk-content">
+                    <h6>YEAR-ROUND ELEMENT</h6>
+                    <h3>All WEATHER</h3>
+                    <button class="hover-button">
+                        VIEW PRODUCTS
+                    </button>
+                </div>
+            </div>
+            <!-- 图片3 -->
+            <div class="desk1">
+                <img src="./images/4.3.png" alt="Puffer">
+                <div class="desk-content">
+                    <h6>CO-DESIGNED WITH </h6>
+                    <h3>PUFFER</h3>
+                    <button class="hover-button">
+                        VIEW PRODUCTS
+                    </button>
+                </div>
+            </div>
+            <!-- 图片4 -->
+            <div class="desk1">
+                <img src="./images/4.4.png" alt="Product 4">
+                <div class="desk-content">
+                    <h6>ULTRA-COMFORT INSULATION</h6>
+                    <h3>LIGHTWGHT</h3>
+                    <button class="hover-button">
+                        VIEW PRODUCTS
+                    </button>
+                </div>
+            </div>
+            <!-- 图片5 -->
+            <div class="desk1">
+                <img src="./images/4.5.png" alt="Product 5">
+                <div class="desk-content">
+                    <h6>WATERPROOF & THABLE</h6>
+                    <h3>GORE-TEX</h3>
+                    <button class="hover-button">
+                        VIEW PRODUCTS
+                    </button>
+                </div>
+            </div>
+            <!-- 图片6 -->
+            <div class="desk1">
+                <img src="./images/4.6.png" alt="Product 6">
+                <div class="desk-content">
+                    <h6>TALLORED TIMELESS</h6>
+                    <h3>BUSINESS</h3>
+                    <button class="hover-button">
+                        VIEW PRODUCTS
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--从这里开始是下一个页面部分；；；；；；；；；；；；；；；-->
+        <!-- 页面容器 -->
+        <div class="desk-container2">
+            <!-- 标题区域 -->
+            <div class="header">
+                <p class="desk3">ENGINEERED FOR THE HARSHEST CONDITIONS</p>
+                <h3>ULTIMATE EXTREME GOOSE DOWN GORE-</h3>
+                <h3>TEX PARKA</h3>
+                <p class="desk2">
+                    Our latest innovation in extreme cold protection, keeping you safe in temperatures as low as -50°C.
+                </p>
+            </div>
+
+            <!-- 图片展示部分 -->
+            <div class="content">
+                <!-- 第一部分 -->
+                <div class="item">
+                    <div class="image-desk">
+                        <img src="./images/4.7.webp" alt="Staggered Pile Stacked">
+                    </div>
+                    <div class="text">
+                        <p class="underline">STAGGERED PILE STACKED FILLING STRUCTURE</p>
+                        <p class="desk2"> Inspired by a polar bear's natural thermal insulation, replicating the design
+                            of
+                            its hair and fat layers. This innovation features double-layer down filling, ensuring even
+                            distribution of down for optimal warmth and insulation.</p>
+                    </div>
+
+                </div>
+
+                <!-- 第二部分 -->
+                <div class="item">
+                    <div class="image-desk">
+                        <img src="./images/4.8.webp" alt="Antarctic Shark Gill">
+                    </div>
+                    <div class="text">
+                        <p class="underline">ANTARCTIC SHARK GILL BREATHING TECHNOLOGY</p>
+                        <p class="desk2">Inspired by the Antarctic shark's breathing system, this bionic technology
+                            features
+                            channels that rapidly discharge excess moisture, maintaining a balance of temperature and
+                            humidity. It helps regulate the body’s tendency to overheat during movement and become cold
+                            when
+                            at rest.</p>
+                    </div>
+
+                </div>
+
+                <!-- 第三部分 -->
+                <div class="item">
+                    <div class="image-desk">
+                        <img src="./images/4.9.jpg" alt="Ergonomic Design Reduces">
+                    </div>
+                    <div class="text">
+                        <p class="underline">ERGONOMIC DESIGN REDUCES WEIGHT</p>
+                        <p class="desk2">Enhances the wearing experience in extreme cold by reducing the load, allowing
+                            for
+                            improved comfort and performance.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--从这里开始是下一个页面部分；；；；；；；；；；；；；；；-->
+        <!-- 页面内容 -->
+        <div class="desk-container3">
+            <!-- 视频背景 -->
+            <video id="background-video" autoplay loop muted>
+                <source src="./images/4.10.mp4" type="video/mp4">
+            </video>
+
+            <!-- 内容区域 -->
+            <div class="desk-content2">
+                <p class="address">28 SOUTH MOLTON STREET, MAYFAIR, LONDON, W1K5RF</p>
+                <h1 class="headline">VISIT OUR LONDON FLAGSHIP STORE</h1>
+                <button class="hover-button">WHAT'S NEW</button>
+            </div>
+
+            <!-- 圆形按钮，跳转到下一部分 -->
+            <div class="scroll-down" onclick="scrollToSection()">
+                <div class="triangle"></div>
+            </div>
+
+            <!-- 左下角的声音按钮 -->
+            <div class="sound-button" id="sound-btn" onclick="toggleSound()">
+                <span id="sound-icon">🔇</span>
+            </div>
+        </div>
+
+        <!-- 第二部分 -->
+
+
+        <!-- JavaScript 代码，，，，，，，，视频滚动到下一部分，，，，，，，，，，，-->
+        <script>
+            // 滚动到下一部分
+            function scrollToSection() {
+                const nextSection = document.getElementById('section-2');
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // 切换视频声音
+            function toggleSound() {
+                const video = document.getElementById('background-video');
+                const soundIcon = document.getElementById('sound-icon');
+                if (video.muted) {
+                    video.muted = false;
+                    soundIcon.textContent = '🔊';
+                } else {
+                    video.muted = true;
+                    soundIcon.textContent = '🔇';
+                }
+            }
+        </script>
+        <div class="滑动门大盒子">
+            <div class="滑门上文字">
+                <h3>Let customers speak for us</h3>
+                <svg t="1734333092801" class="iconn" viewBox="0 0 5568 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="6499" width="64" height="64">
+                    <path
+                        d="M667.183505 392.181443l-125.096907-380.041237-125.096907 380.041237H21.113402l323.035052 234.358763-125.096908 380.041237 323.035052-234.358763 323.035051 239.637114-125.096907-385.319588 327.785567-234.358763zM5547.546392 392.181443h-401.154639l-125.096908-380.041237-125.096907 380.041237h-395.348453l322.507216 234.358763-124.569072 380.041237 322.507216-234.358763 323.035052 239.637114-125.096907-385.319588zM4026.853608 392.181443l-125.096907-380.041237-125.096907 380.041237h-395.876289l323.035052 234.358763-125.096908 380.041237 323.035052-234.358763 323.035052 239.637114-125.096908-385.319588 327.785567-234.358763zM2906.787629 392.181443L2781.690722 12.140206l-125.096908 380.041237h-395.876288l323.035051 234.358763-125.096907 380.041237 323.035052-234.358763 323.035051 239.637114-125.096907-385.319588 328.313402-234.358763zM1786.721649 392.181443l-125.096907-380.041237-124.569072 380.041237h-395.876289l322.507217 234.358763-124.569072 380.041237 322.507216-234.358763 323.035052 239.637114-125.096907-385.319588 328.313402-234.358763z"
+                        fill="#2c2c2c" p-id="6500">
+
+                    </path>
+                </svg>
+
+
+                <p class="小标签1">from 80 reviews</p>
+            </div>
+            <div class="滑动门小盒子">
+                <div></div>
+                <div class="滑动门盒子">
+
+                </div>
+                <div></div>
+                <a class="括号键" href="#">
+                    <svg t="1734338738717" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="11239" width="64" height="64">
+                        <path
+                            d="M640 832a21.333333 21.333333 0 0 1-15.146667-6.186667l-298.666666-298.666666a21.333333 21.333333 0 0 1 30.293333-30.293334l298.666667 298.666667a21.333333 21.333333 0 0 1 0 30.293333A21.333333 21.333333 0 0 1 640 832z"
+                            fill="#333333" p-id="11240"></path>
+                        <path
+                            d="M341.333333 533.333333a21.333333 21.333333 0 0 1-15.146666-6.186666 21.333333 21.333333 0 0 1 0-30.293334l298.666666-298.666666a21.333333 21.333333 0 0 1 30.293334 30.293333l-298.666667 298.666667A21.333333 21.333333 0 0 1 341.333333 533.333333z"
+                            fill="#333333" p-id="11241">
+
+                        </path>
+                    </svg>
+                    <svg t="1734338771108" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="11456" width="64" height="64">
+                        <path
+                            d="M682.666667 533.333333a21.333333 21.333333 0 0 1-15.146667-6.186666l-298.666667-298.666667a21.333333 21.333333 0 0 1 30.293334-30.293333l298.666666 298.666666a21.333333 21.333333 0 0 1 0 30.293334A21.333333 21.333333 0 0 1 682.666667 533.333333z"
+                            fill="#333333" p-id="11457"></path>
+                        <path
+                            d="M384 832a21.333333 21.333333 0 0 1-15.146667-6.186667 21.333333 21.333333 0 0 1 0-30.293333l298.666667-298.666667a21.333333 21.333333 0 0 1 30.293333 30.293334l-298.666666 298.666666A21.333333 21.333333 0 0 1 384 832z"
+                            fill="#333333" p-id="11458">
+
+                        </path>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+        <div class="通讯盒子">
+            <div class="文字">
+                <p class="文字1">通讯</p><br>
+                <p class="文字2">注册即可享受 10% 折扣，并成为第一个获得最新促销信息的人。</p>
+            </div>
+
+
+            <div class="表单">
+                <input type="email5" placeholder="电子邮件">
+                <button class="hover-button2">订阅</button>
+            </div>
+        </div>
+        <div class="大盒子">
+            <div class="盒子1">
+                <div class="盒子11">
+                    <p class="文字3">订阅我们的时事通讯即可收到独家优惠。</p>
+                    <input type="email1" placeholder="电子邮件"><br>
+                    <button class="hover-button1" type="submit">订阅</button>
+                </div>
+                <div class="盒子12">
+                    <img src="./images/图1.webp" alt="">
+                    <img src="./images/图2.webp" alt="">
+                    <img src="./images/图3.webp" alt="">
+                </div>
+                <div class="盒子13">
+                    <a href="#"><svg t="1734157564634" class="iconc" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="4418" width="16" height="16">
+                            <path
+                                d="M320 64C249.4 64 192 121.4 192 192v704c0 35.4 28.6 64 64 64s64-28.6 64-64V576h320c35.4 0 64-28.6 64-64s-28.6-64-64-64H320V192h448c35.4 0 64-28.6 64-64s-28.6-64-64-64H320z"
+                                p-id="4419">
+
+                            </path>
+                        </svg></a>
+                    <a href="#"><svg t="1734157662208" class="iconc" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="6676" width="16" height="16">
+                            <path
+                                d="M269.44 256l23.296-75.381333A74.666667 74.666667 0 0 1 364.074667 128h295.850666a74.666667 74.666667 0 0 1 71.338667 52.618667L754.56 256H821.333333c64.8 0 117.333333 52.533333 117.333334 117.333333v426.666667c0 64.8-52.533333 117.333333-117.333334 117.333333H202.666667c-64.8 0-117.333333-52.533333-117.333334-117.333333V373.333333c0-64.8 52.533333-117.333333 117.333334-117.333333h66.773333z m23.605333 64H202.666667a53.333333 53.333333 0 0 0-53.333334 53.333333v426.666667a53.333333 53.333333 0 0 0 53.333334 53.333333h618.666666a53.333333 53.333333 0 0 0 53.333334-53.333333V373.333333a53.333333 53.333333 0 0 0-53.333334-53.333333h-90.378666a32 32 0 0 1-30.570667-22.549333l-30.272-97.930667a10.666667 10.666667 0 0 0-10.186667-7.52H364.074667a10.666667 10.666667 0 0 0-10.186667 7.52l-30.272 97.92A32 32 0 0 1 293.045333 320zM512 725.333333c-88.362667 0-160-71.637333-160-160 0-88.362667 71.637333-160 160-160 88.362667 0 160 71.637333 160 160 0 88.362667-71.637333 160-160 160z m0-64a96 96 0 1 0 0-192 96 96 0 0 0 0 192z"
+                                fill="#000000" p-id="6677">
+
+                            </path>
+                        </svg></a>
+                    <a href="#"><svg t="1734157694786" class="iconc" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="7748" width="16" height="16">
+                            <path
+                                d="M937.4 423.9c-84 0-165.7-27.3-232.9-77.8v352.3c0 179.9-138.6 325.6-309.6 325.6S85.3 878.3 85.3 698.4c0-179.9 138.6-325.6 309.6-325.6 17.1 0 33.7 1.5 49.9 4.3v186.6c-15.5-6.1-32-9.2-48.6-9.2-76.3 0-138.2 65-138.2 145.3 0 80.2 61.9 145.3 138.2 145.3 76.2 0 138.1-65.1 138.1-145.3V0H707c0 134.5 103.7 243.5 231.6 243.5v180.3l-1.2 0.1"
+                                p-id="7749">
+
+                            </path>
+                        </svg></a>
+
+
+                </div>
+            </div>
+            <div class="盒子2">
+                <div class="列1">
+                    <a class="大标签" href="#">店铺</a><br>
+                    <img src="./images/横线.png" alt=""><br>
+                    <a class="小标签" href="#">防晒系列</a><br><br>
+                    <a class="小标签" href="#">舒适户外</a><br><br>
+                    <a class="小标签" href="#">孩子们</a><br><br>
+                    <a class="小标签" href="#">极寒系列</a><br><br>
+                    <a class="小标签" href="#">极限收藏</a><br><br>
+                    <a class="小标签" href="#">全天候夹克</a><br><br>
+                    <a class="小标签" href="#">超轻夹克</a><br><br>
+                    <a class="小标签" href="#">UPF夹克</a><br><br>
+
+                </div>
+                <div class="列2">
+                    <a class="大标签" href="#">客户服务</a><br>
+                    <img src="./images/横线.png" alt=""><br>
+                    <a class="小标签" href="#">你的忠诚奖励</a><br><br>
+                    <a class="小标签" href="#">退货平台</a><br><br>
+                    <a class="小标签" href="#">常见问题</a><br><br>
+                    <a class="小标签" href="#">联系我们</a><br><br>
+                    <a class="小标签" href="#">店铺地址</a><br><br>
+                    <a class="小标签" href="#">护理指南</a><br><br>
+                    <a class="小标签" href="#">尺寸指南</a><br><br>
+                    <a class="小标签" href="#">网站地图</a><br><br>
+                </div>
+                <div class="列3">
+                    <a class="大标签" href="#">关于我们</a><br>
+                    <img src="./images/横线.png" alt=""><br>
+                    <a class="小标签" href="#">退货与送货</a><br><br>
+                    <a class="小标签" href="#">条款与条件</a><br><br>
+                    <a class="小标签" href="#">免责声明与政策</a><br><br>
+                    <a class="小标签" href="#">博客</a><br><br>
+                    <a class="小标签" href="#">B实验室</a><br><br>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="底部">
+            <select id="currency-select">
+
+                <option value="RUB">俄罗斯 (GBP £)</option>
+                <option value="ISK">冰岛 (GBP £)</option>
+                <option value="CAD">加拿大 (GBP £)</option>
+                <option value="HUF">匈牙利 (GBP £)</option>
+                <option value="IDR">印度尼西亚 (GBP £)</option>
+                <option value="RSD">塞尔维亚 (GBP £)</option>
+                <option value="EUR_AU">奥地利 (GBP £)</option>
+                <option value="EUR_AD">安道尔 (GBP £)</option>
+                <option value="EUR_GR">希腊 (GBP £)</option>
+                <option value="EUR_DE">德国 (GBP £)</option>
+
+            </select>
+            <select id="currency-select1">
+                <option value="RUB">简体中文</option>
+
+            </select>
+            <div class="底部中部">
+                <p class="签啊啊啊啊啊"> &copy; 2024 - Bosideng Fashion Powerd by Shopify</p>
+            </div>
+            <div class="底部右"><img src="./images/底部右.png" alt=""></div>
+        </div>
+
+
+
+</body>
+
+</html>
