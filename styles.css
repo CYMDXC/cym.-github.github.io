@@ -1,0 +1,1403 @@
+/* 基本导航栏样式 */
+.navbar1 {
+    background-color: #191919;
+    color: white;
+    width: 100%;
+    height: 50px;
+    /* 设置导航栏高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 总容器设置 */
+.container {
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    gap: 10px;
+    /* 两侧箭头与中间内容的间距 */
+    padding: 10px;
+    border-radius: 10px;
+    width: 1200px;
+    /* 控制整体宽度 */
+    margin: 0 auto;
+    /* 居中显示 */
+    overflow: hidden;
+    /* 防止文字超出容器 */
+    height: 800px;
+
+    position: relative;
+}
+
+/* 箭头样式 */
+.arrow {
+
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    /* 绝对定位，用于在容器内自由定位 */
+    top: 50%;
+    /* 垂直居中 */
+
+    cursor: pointer;
+    /* 鼠标悬停时显示为可点击状态 */
+}
+
+.arrow .left-arrow {
+    float: left;
+
+
+}
+
+.arrow .right-arrow {
+    float: right;
+
+}
+
+/* 内容区的样式 */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 从顶部开始排列 */
+    overflow: hidden;
+    /* 隐藏滚动条 */
+    height: 30px;
+    /* 设置容器的高度 */
+    position: relative;
+}
+
+/* 每个文本项的样式 */
+.text-item {
+    font-size: 14px;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    animation: scroll-up 9s infinite;
+    /* 添加向上滚动的动画 */
+}
+
+/* 定义滚动动画 */
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+        /* 初始位置在容器的下方 */
+    }
+
+    33% {
+        transform: translateY(0);
+        /* 移动到容器可视区域 */
+    }
+
+    66% {
+        transform: translateY(-100%);
+        /* 移动到容器上方，消失 */
+    }
+
+    100% {
+        transform: translateY(-100%);
+        /* 保持在容器上方 */
+    }
+}
+
+/* 使每个文字项的动画时序错开 */
+.text-item:nth-child(1) {
+    animation-delay: 3s;
+}
+
+.text-item:nth-child(2) {
+    animation-delay: 3s;
+    transition: transform 0.5s ease;
+    /* 过渡效果持续0.5秒 */
+}
+
+.text-item:nth-child(3) {
+    animation-delay: 3s;
+}
+
+/* 设置导航栏的整体布局 */
+.navbar {
+    position: absolute;
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    justify-content: space-between;
+    /* 左右元素分布，中间元素居中 */
+    align-items: center;
+    /* 垂直方向居中 */
+    background: transparent;
+    /* 默认背景为透明 */
+    color: white;
+    /* 文本颜色 */
+    z-index: 4;
+    transition: background-color 0.3s ease;
+    /* 背景色平滑过渡 */
+    width: 100%;
+}
+
+
+/* 导航栏链接样式 */
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* 文本颜色过渡 */
+}
+
+/* 鼠标滑过时导航栏背景色 */
+.navbar:hover {
+    background: white;
+    /* 滑过时显示背景色 */
+}
+
+.navbar:hover,
+.navbar:hover a {
+    color: black;
+    /* 文字颜色变为黑色 */
+}
+
+.navbar:hover,
+.navbar:hover img {
+    color: #131111;
+}
+
+.nav-bar-list {
+    display: none;
+    /* 初始状态不显示 */
+    width: 180px;
+    height: 130px;
+    background: #fff;
+    border: 1px solid #131111;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-top: 22px;
+
+}
+
+.nav-bar-list .name {
+    font-size: 15px;
+    color: #333;
+}
+
+
+/* 鼠标滑过具体的 li 时，显示当前 li 下的子导航栏 */
+.center ul li:hover .nav-bar-list {
+    display: block;
+    /* 仅显示当前 li 下的导航栏 */
+}
+
+
+
+/* 左侧元素：图片 */
+.left {
+    text-align: left;
+    /* 左对齐 */
+}
+
+.left .logo {
+    width: 115px;
+    /* 设置图片的宽度 */
+    height: 55px;
+    /* 保持图片的比例 */
+    margin-top: 10px;
+    padding-left: 20px;
+    transition: color 0.3s ease;
+}
+
+/* 中间元素 */
+.center {
+    display: flex;
+    /* 使用 Flexbox 来排列子元素 */
+    justify-content: center;
+    /* 子元素居中排列 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    flex-grow: 1;
+    /* 使中间部分自动占满剩余空间 */
+    position: relative;
+    margin-left: 200px;
+}
+
+.center ul {
+    list-style: none;
+    /* 去掉默认的列表样式 */
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    gap: 25px;
+    /* 设置菜单项之间的间距 */
+}
+
+.center li {
+    text-align: center;
+    /* 每个菜单项居中 */
+}
+
+.center a {
+    color: #fff;
+    /* 链接文字颜色 */
+    text-decoration: none;
+    /* 去掉链接下划线 */
+}
+
+/* 右侧元素：导航和图标 */
+.right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    margin-right: 100px;
+    flex-wrap: nowrap;
+}
+
+.right ul {
+    list-style: none;
+    /* 移除默认的圆点 */
+    padding: 0;
+    /* 去掉默认内边距 */
+    margin: 0;
+    /* 可选：去掉默认外边距 */
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+/* 按钮样式 */
+
+
+.hero-text button {
+    width: 183px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    /* 按钮背景色 */
+    color: black;
+    /* 字体颜色 */
+    font-size: 16px;
+    /* 字体大小 */
+    font-weight: bold;
+    padding: 10px 20px;
+    /* 按钮内边距 */
+    border: 2px solid white;
+    /* 边框样式 */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: transparent;
+    /* 鼠标悬停时背景透明 */
+    color: white;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 精确居中 */
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* 添加文字阴影 */
+    z-index: 4;
+}
+
+.hero-text h1 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.hero-text p {
+    font-size: 1rem;
+}
+
+
+.hover-button {
+    background-color: white;
+    /* 初始背景色为白色 */
+    color: black;
+    /* 初始字体颜色 */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid white;
+    /* 初始边框为白色 */
+    cursor: pointer;
+    position: relative;
+    /* 设置定位 */
+    overflow: hidden;
+    /* 隐藏超出按钮的元素 */
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    /* 平滑过渡 */
+    z-index: 1;
+}
+
+/* 鼠标悬停时字体颜色和边框变化 */
+.hover-button:hover {
+    color: white;
+    /* 字体颜色变为白色 */
+    border: 2px solid white;
+    /* 边框保持白色 */
+    background: transparent;
+}
+
+/* 渐变透明背景 */
+.hover-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #fff 5%, transparent 100%);
+    /* 左到右透明渐变 */
+    transform: translateX(-100%);
+    /* 初始位置移到按钮左侧外 */
+    transition: transform 0.5s ease-in-out;
+    /* 添加平滑过渡 */
+    z-index: -1;
+    /* 放在按钮文字下方 */
+}
+
+/* 鼠标悬停时背景平滑移动 */
+.hover-button:hover::before {
+    transform: translateX(0);
+    /* 从左到右移动 */
+}
+
+
+/* 圆形按钮 */
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    top: 750px;
+}
+
+.scroll-down:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.scroll-down .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    transition: opacity 0.3s;
+}
+
+.scroll-down:hover .triangle {
+    opacity: 0;
+    /* 悬停时消失 */
+}
+
+/* 轮播容器样式 */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: 0px auto;
+    overflow: hidden;
+
+}
+
+/* 轮播图背景蒙版 */
+.carousel-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    z-index: 1;
+    /* 确保蒙版位于图片上层 */
+}
+
+/* 确保视频没有蒙版 */
+.carousel-content video::before {
+    content: none;
+    /* 清除蒙版 */
+}
+
+/* 特定页面的轮播图元素可见 */
+.carousel-home .hero-text {
+    visibility: visible;
+}
+
+/* 其他页面的轮播图元素隐藏 */
+.carousel:not(.carousel-home) .hero-text {
+    visibility: hidden;
+}
+
+
+/* 内容容器 */
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* 图片和视频样式 */
+.carousel-content img,
+.carousel-content video {
+    width: 100%;
+    /* 确保宽度填满父容器 */
+    height: 100%;
+    /* 高度填满父容器 */
+    flex-shrink: 0;
+    /* 防止缩小 */
+    object-fit: cover;
+    /* 保持内容比例并填满整个区域 */
+    position: relative;
+    /* 保持与父元素对齐 */
+}
+
+
+/* 指示圆点样式 */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 4;
+    gap: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+
+
+
+.变动图 {
+    width: 100%;
+    height: 800px;
+    background-color: white;
+
+}
+
+.开头超链接 {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    text-align: center;
+}
+
+.小盒 {
+    width: 300px;
+    height: 700px;
+    background-color: white;
+    float: left;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+
+.图解1 {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    margin-top: 500px;
+    text-align: center;
+}
+
+
+
+.小盒 img {
+    position: absolute;
+
+
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.小盒 img:first-child {
+    z-index: 1;
+}
+
+.小盒:hover img:first-child {
+    display: none;
+}
+
+.小盒:hover img:last-child {
+    display: block;
+    z-index: 1;
+}
+
+
+
+.签 {
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 20px;
+    color: black;
+}
+
+.女性 {
+    font-size: 30px;
+    color: black;
+}
+
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+
+/* 容器 */
+.desk-container1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 三列等分 */
+    gap: 30px;
+    /* 网格间隔 */
+    padding: 30px;
+    background-color: #1a1a1a;
+    /* 深色背景 */
+    margin: 0 auto;
+}
+
+/* 每个盒子 */
+.desk1 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    /* 字体颜色 */
+    font-family: Arial, sans-serif;
+
+}
+
+.desk1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* 文本样式 */
+.desk-content {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.desk-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.desk2 {
+    position: relative;
+}
+
+/* 鼠标悬停效果 */
+.desk1:hover img {
+    filter: brightness(70%);
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+
+/* 按钮基础样式 */
+.hover-button {
+    background-color: white;
+    /* 初始背景色为白色 */
+    color: black;
+    /* 初始字体颜色 */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid white;
+    /* 初始边框为白色 */
+    cursor: pointer;
+    position: relative;
+    /* 设置定位 */
+    overflow: hidden;
+    /* 隐藏超出按钮的元素 */
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    /* 平滑过渡 */
+    z-index: 1;
+}
+
+/* 鼠标悬停时字体颜色和边框变化 */
+.hover-button:hover {
+    color: white;
+    /* 字体颜色变为白色 */
+    border: 2px solid white;
+    /* 边框保持白色 */
+    background: transparent;
+}
+
+/* 渐变透明背景 */
+.hover-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #fff 5%, transparent 100%);
+    /* 左到右透明渐变 */
+    transform: translateX(-100%);
+    /* 初始位置移到按钮左侧外 */
+    transition: transform 0.5s ease-in-out;
+    /* 添加平滑过渡 */
+    z-index: -1;
+    /* 放在按钮文字下方 */
+}
+
+/* 鼠标悬停时背景平滑移动 */
+.hover-button:hover::before {
+    transform: translateX(0);
+    /* 从左到右移动 */
+}
+
+
+
+
+/*三张照片的css；；；；；；；；；；；；；；；；；；；；；；；；*/
+/* 页面背景与字体 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 容器样式 */
+.desk-container2 {
+    width: 100%;
+    display: flex;
+    /* 使用Flexbox布局 */
+    float: left;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: flex-start;
+    /* 垂直顶部对齐 */
+    gap: 20px;
+    /* 盒子之间的间距 */
+    max-width: 1200px;
+    /* 最大宽度 */
+    margin: 0 auto;
+    /* 将容器整体居中 */
+    flex-wrap: wrap;
+    /* 如果宽度不足，自动换行 */
+
+}
+
+/* 标题部分 */
+.header {
+    text-align: left;
+    /* 标题居左 */
+    margin-bottom: 40px;
+    width: 100%;
+
+}
+
+.header h3 {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-decoration: underline;
+    /* 标题带下划线 */
+    margin-bottom: 10px;
+
+    font-family: 'Times New Roman', serif;
+    /* 衬线字体 */
+    letter-spacing: 2px;
+    /* 字母间距 */
+    text-transform: uppercase;
+    /* 转换为大写 */
+    text-align: left;
+    /* 左对齐 */
+    margin-bottom: 15px;
+    /* 下边距 */
+
+}
+
+.header .subtitle {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* 内容区域布局 */
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    /* 控制图片之间的间距 */
+}
+
+/* 每一部分样式 */
+.item {
+    flex: 1;
+    /* 自动填充空间 */
+    max-width: 300px;
+    /* 每个盒子的最大宽度 */
+    text-align: left;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* 图片盒子 */
+.image-desk {
+    width: 350px;
+    height: 350px;
+    /* 固定高度，保持大小不变 */
+    overflow: hidden;
+    /* 超出部分隐藏 */
+    position: relative;
+    border-radius: 0px;
+    /* 无圆角 */
+}
+
+/* 图片样式 */
+.image-desk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 保证图片填充整个盒子 */
+    transition: transform 3.0s ease;
+    /* 平滑动画 */
+}
+
+/* 鼠标悬停时图片放大 */
+.image-desk img:hover {
+    transform: scale(1.2);
+    /* 图片放大1.2倍 */
+}
+
+.desk2 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    ;
+    /* 无衬线字体 */
+    font-size: 12px;
+    /* 字体大小 */
+    text-align: left;
+    /* 左对齐 */
+    margin: 0 auto;
+    width: 100%;
+    /* 宽度 */
+    font-weight: lighter;
+
+}
+
+.desk3 {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    /* 正文默认字体 */
+    color: #222;
+    /* 字体颜色 */
+    line-height: 1.6;
+    /* 行高 */
+    font-size: 20px;
+    /* 字体大小 */
+    text-align: left;
+    /* 左对齐 */
+
+}
+
+.underline {
+    font-family: 'Times New Roman', serif;
+    /* 衬线字体 */
+    font-size: 25px;
+    /* 字体大小 */
+    font-weight: normal;
+    /* 正常 */
+    letter-spacing: 2px;
+    /* 字母间距 */
+    text-transform: uppercase;
+    /* 转换为大写 */
+    text-align: left;
+    /* 居中对齐 */
+    margin-bottom: 15px;
+    /* 下边距 */
+
+}
+
+
+
+
+
+
+/* 视频页面的css；；；；；；；；；；；；；；；；*/
+
+
+.desk-container3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 视频背景 */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* 内容区域 */
+.desk-content2 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.address {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.headline {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* 圆形按钮 */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll-down:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.scroll-down .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    transition: opacity 0.3s;
+}
+
+.scroll-down:hover .triangle {
+    opacity: 0;
+    /* 悬停时消失 */
+}
+
+/* 声音按钮 */
+.sound-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.sound-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+
+
+.滑动门大盒子 {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+}
+
+
+
+.滑门上文字 {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    margin: 0px;
+    ;
+}
+
+.滑动门小盒子 {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    text-align: center;
+}
+
+.iconn {
+    margin-top: -30px;
+}
+
+.小标签1 {
+    margin-top: -20px;
+}
+
+
+
+.滑动门盒子 {
+    margin: 0;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: -100px;
+    background-color: white;
+    animation: hui 20s ease-out infinite alternate;
+
+}
+
+.滑动门盒子 img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.括号键 {
+    text-decoration: none;
+}
+
+@keyframes hui {
+
+    0%,
+    20% {
+        background-image: url(images/滑1.png);
+        background-size: contain;
+    }
+
+    20%,
+    40% {
+        background-image: url(images/滑2.png);
+        background-size: contain;
+    }
+
+    50% {
+        background-image: url(images/滑3.png);
+        background-size: contain;
+    }
+
+    75% {
+        background-image: url(images/滑4.png);
+        background-size: contain;
+    }
+
+    100% {
+        background-image: url(images/滑5.png);
+        background-size: contain;
+    }
+
+}
+
+.通讯盒子 {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+
+}
+
+.文字1 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.文字2 {
+    color: white;
+    margin-top: 20px;
+}
+
+.文字 {
+    text-align: center;
+    padding-top: 40px;
+    line-height: 0px;
+}
+
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.表单 {
+    text-align: center;
+    margin-top: -60px;
+}
+
+
+input[type="email5"] {
+    width: 270px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+
+    background-color: black;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    margin-top: 100px;
+}
+
+.大盒子 {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+
+.盒子1 {
+    width: 25%;
+    height: 500px;
+    background-color: white;
+    float: left;
+}
+
+.盒子2 {
+    width: 60%;
+    height: 500px;
+    background-color: white;
+    float: right;
+}
+
+.文字3 {
+    color: gray;
+}
+
+.盒子11 {
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    margin-top: 50px;
+}
+
+.盒子12 {
+    background-color: white;
+    width: 100%;
+    height: 40%;
+}
+
+.盒子13 {
+    background-color: white;
+    width: 100%;
+    height: 20%;
+
+}
+
+input[type="email1"] {
+    width: 270px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(130, 128, 128);
+}
+
+/* 按钮基础样式 */
+.hover-button2 {
+    background-color: white;
+    /* 初始背景色为白色 */
+    color: black;
+    /* 初始字体颜色 */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid white;
+    /* 初始边框为白色 */
+    cursor: pointer;
+    position: relative;
+    /* 设置定位 */
+    overflow: hidden;
+    /* 隐藏超出按钮的元素 */
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    /* 平滑过渡 */
+    z-index: 1;
+    width: 150px;
+    height: 40PX;
+
+}
+
+/* 鼠标悬停时字体颜色和边框变化 */
+.hover-button2:hover {
+    color: white;
+    /* 字体颜色变为白色 */
+    border: 2px solid white;
+    /* 边框保持白色 */
+    background: transparent;
+}
+
+/* 渐变透明背景 */
+.hover-button2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #fff 5%, transparent 100%);
+    /* 左到右透明渐变 */
+    transform: translateX(-100%);
+    /* 初始位置移到按钮左侧外 */
+    transition: transform 0.5s ease-in-out;
+    /* 添加平滑过渡 */
+    z-index: -1;
+    /* 放在按钮文字下方 */
+}
+
+/* 鼠标悬停时背景平滑移动 */
+.hover-button2:hover::before {
+    transform: translateX(0);
+    /* 从左到右移动 */
+}
+
+/* 按钮基础样式 */
+.hover-button1 {
+    background-color: black;
+    /* 初始背景色为白色 */
+    color: white;
+    /* 初始字体颜色 */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid black;
+    /* 初始边框为白色 */
+    cursor: pointer;
+    position: relative;
+    /* 设置定位 */
+    overflow: hidden;
+    /* 隐藏超出按钮的元素 */
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    /* 平滑过渡 */
+    z-index: 1;
+}
+
+/* 鼠标悬停时字体颜色和边框变化 */
+.hover-button1:hover {
+    color: black;
+    /* 字体颜色变为白色 */
+    border: 2px solid black;
+    /* 边框保持白色 */
+    background: transparent;
+}
+
+/* 渐变透明背景 */
+.hover-button1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #fff 5%, transparent 100%);
+    /* 左到右透明渐变 */
+    transform: translateX(-100%);
+    /* 初始位置移到按钮左侧外 */
+    transition: transform 0.5s ease-in-out;
+    /* 添加平滑过渡 */
+    z-index: -1;
+    /* 放在按钮文字下方 */
+}
+
+/* 鼠标悬停时背景平滑移动 */
+.hover-button1:hover::before {
+    transform: translateX(0);
+    /* 从左到右移动 */
+}
+
+
+
+.盒子12 img {
+    width: 100px;
+    height: 100px;
+}
+
+.盒子12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.盒子13 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconc {
+    width: 16px;
+    height: 16px;
+    margin: 50px;
+    color: azure;
+}
+
+.iconc:hover {
+    color: black;
+    height: 20px;
+    width: 20px;
+}
+
+.大标签 {
+    color: black;
+    text-decoration: none;
+}
+
+.小标签 {
+    color: gray;
+    text-decoration: none;
+}
+
+.小标签:hover {
+    color: black;
+}
+
+.盒子2 {
+    display: flex;
+}
+
+.列1 {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    float: left;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.列2 {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.列3 {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    margin-left: 30px;
+    margin-top: 50px;
+
+}
+
+.底部 {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.底部中部 {
+    width: 40%;
+    height: 50px;
+    text-align: center;
+}
+
+.底部右 {
+    height: 50px;
+    width: 30%;
+    margin-left: 100px;
+}
+
+.底部右 img {
+    width: 100%;
+    height: 100%;
+}
+
+#currency-select {
+    margin-right: 10px;
+    border: none;
+}
+
+#currency-select1 {
+
+    border: none;
+}
